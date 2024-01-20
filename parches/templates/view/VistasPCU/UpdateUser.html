@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "CSS/bootstrap(1).css" %}">
+    <link rel="stylesheet" href="{% static "CSS/registro.css" %}">  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body style=" background-image: url(https://cdn.leonardo.ai/users/0a8c9781-41d8-4096-9b34-bfb6a595afce/generations/17773aab-41f9-451f-a98e-c9bd2be457ad/Leonardo_Diffusion_XL_un_fondo_bonito_y_llamativo_para_un_logi_0.jpg) ; background-repeat: no-repeat; background-size: cover;">
+    {% if user.is_authenticated %}
+    <div class="container-fluid d-flex justify-content-center align-items-center " style="height: 50.8rem;  " >
+        
+<div  class="row cartaR mt-5" style="background-color: rgba(255, 255, 255, 0.445); ">
+    <div class="text-center palabraRegistro">
+     
+        <h2 class="text-white" style=" font-style: italic;">Actualiza tu informacion</h2>
+    
+        <hr class="border border-4 border border-black">
+    </div>
+   
+    
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="inputRegistro">
+            <div class="nombreRegistro d-block ">
+               
+                {{ form.usuario }}
+            </div>
+            <div class="correoRegistro d-block">
+        
+                {{ form.correo }}
+            </div>
+            <div class="telefonoRegistro   ">
+             
+                {{ form.telefono }}
+            </div>
+            <div class="contraseñaRegistro   ">
+                {% if form.nombreempresa.value %}
+                {{ form.nombreempresa }}
+            {% endif %}
+            
+            {% if form.direccion.value %}
+                {{ form.direccion }}
+            {% endif %}
+                {% comment %} {{ form.password }} {% endcomment %}
+            </div>
+            <div> {{ form.fotoperfil }} </div>
+    <div class="mb-1 ">
+    
+        <h3 style="font-style:italic ;">actualiza tu descripcion</h3>
+        {{ form.Descripcion }}
+    </div>
+          
+        </div>
+        <div class="botonRegistrarse mb-4 ">
+            <button type="submit" class="btn btn-primary w-50 mt-3 ">Guardar cambios</button>
+        </div>
+        
+    </form>
+</div>
+</div>
+
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "CSS/bootstrap(1).css" %}">
+    <link rel="stylesheet" href="{% static "CSS/registro.css" %}">  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body style=" background-image: url(https://cdn.leonardo.ai/users/0a8c9781-41d8-4096-9b34-bfb6a595afce/generations/17773aab-41f9-451f-a98e-c9bd2be457ad/Leonardo_Diffusion_XL_un_fondo_bonito_y_llamativo_para_un_logi_0.jpg) ; background-repeat: no-repeat; background-size: cover;">
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 44.8rem;  " >
+        <div class="row cartaR" style="background-color: rgba(255, 255, 255, 0.445);">
+            <div class="palabraRegistro">
+                <h1 style="color: #ffffff;">Registro</h1>
+            </div>
+            <script>
+
+                $(document).ready(function(){
+                    $(".alert").fadeTo(5000, 0).slideUp(500, function(){
+                        $(this).remove();
+                    });
+                });
+            </script>
+            <form method="post">
+                {% csrf_token %}
+
+                <div class="inputRegistro">
+                    <div class="nombreRegistro d-block ">
+                        {{ form.usuario }}
+                        {% if form.errors.usuario %}<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                         <div class="alert alert-success" role="alert">
+                            {{ form.errors.usuario }}
+                            </div>
+                            
+                        {% endif %}
+                    </div>
+                    <div class="correoRegistro d-block">
+                        {{ form.correo }}
+                        {% if form.errors.correo %}
+                        <div class="alert alert-success" role="alert">
+                            {{ form.errors.correo }}
+                            </div>
+                            
+                        {% endif %}
+                    </div>
+                    <div class="telefonoRegistro   ">
+                        {{ form.telefono }}
+                        {% if form.errors.telefono %}
+                        <div class="alert alert-success" role="alert">
+                            {{ form.errors.telefono }}
+                            </div>
+                            
+                        {% endif %}
+                    </div>
+                    <div class="contraseñaRegistro   ">
+                        {{ form.password1 }}
+                        {% if form.errors.password1 %}
+                        <div class="alert alert-success" role="alert">
+                            {{ form.errors.password1 }}
+                            </div>
+                       
+                        {% endif %}
+                    </div>
+                    <div class="contraseñaRegistro   ">
+                        {{ form.password2 }}
+                        {% if form.errors.password2 %}
+                        <div class="alert alert-success" role="alert">
+                            {{ form.errors.password2 }}
+                            </div>
+                           
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="botonRegistrarse">
+                    <button type="submit" class="btn btn-success">Registrarse</button>
+                </div>
+                <div class="cuentaExistente d-block text-center">
+                    <a href="{% url 'login' %}">¿Ya tienes una cuenta creada?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "CSS/bootstrap(1).css" %}" />
+    <link rel="stylesheet" href="{% static "CSS/tipoCuenta.css" %} ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Tipo de cuenta</title>
+</head>
+
+<body style="background-image: url(../static/IMG/def.png); background-repeat: no-repeat; background-position: center; background-size: cover;">
+  <div class="container-fluid">
+      <div class="row titulo">
+          <h1>SELECCIONE EL TIPO DE CUENTA</h1>
+      </div>
+      <div class="row fondo">
+      </div>
+
+      <div class="row seleccion mt-5">
+        <div class="col-5">
+          <a href="{% url "register" %}" class="card-link">
+            <div class="card" style="width: 22rem;">
+              <img src="{% static 'IMG/pers.png' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="{% url "register" %}" class="btn btn-success">Cuenta para uso personal</a>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-5">
+          <a href="{% url "RegisterCompany" %}" class="card-link">
+            <div class="card" style="width: 22rem;">
+              <img src="{% static 'IMG/emps.png' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <a href="{% url "RegisterCompany" %}" class="btn btn-success">Cuenta para Empresa/Organización</a>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+  </div>
+</body>
+
+</html>

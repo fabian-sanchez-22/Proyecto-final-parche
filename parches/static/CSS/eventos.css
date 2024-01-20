@@ -1,0 +1,168 @@
+.cartaEvento a {
+text-decoration: none;
+color: white;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+.cartaEvento{
+    display: flex;
+    margin-left: 30px;
+    width: 95%;
+    height: 700px !important;
+    }
+
+    .mapa {
+   height: 1000px;
+   width: 1000px;
+    }
+    .row.busqueda {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    
+    .custom-search-form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 70%;
+      width: 100%;
+      margin: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    
+    .search-input,
+    .select-box,
+    .search-button {
+      margin: 5px;
+      padding: 10px;
+      width: calc(30% - 10px);
+      box-sizing: border-box;
+    }
+    
+    .search-input {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .select-box {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f8f8f8;
+    }
+    
+    .search-button {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .search-button:hover {
+      background-color: #45a049;
+    }
+    
+
+
+/* Estilos para la sección de eventos */
+.container-fluid {
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .cartaEvento {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nombretorneo {
+    background-color: #007bff;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .nombretorneo h4 {
+    color: white;
+    margin: 0;
+  }
+  
+  .descripcion {
+    padding: 20px;
+  }
+  
+  .descripcion img {
+    width: 100%;
+    height: auto;
+
+  }
+  
+  .descripcion h4 {
+    margin: 10px 0;
+  }
+  
+  .botones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .compartir {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .compartir img {
+    margin-left: 5px;
+  }
+  
+  /* Estilos para el formulario de unirse */
+  form {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Alineación específica para el botón de unirse */
+  form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  form button img {
+    margin-left: 5px;
+  }
+  
+  /* Estilos para la sección del mapa */
+
+  
+  /* Estilos para la entrada de latitud y longitud (ocultas) */
+  input[disabled] {
+    display: none;
+  }
+  

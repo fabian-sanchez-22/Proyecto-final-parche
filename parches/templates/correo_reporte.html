@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;">
+    <div class="container" style="max-width: 600px; margin: 0 auto; padding: 20px;">
+        <div class="header" style="background-color: #365C45; color: #fff; text-align: center; padding: 20px;">
+            <h1>¡Reporte de Usuario!</h1>
+        </div>
+        <div class="content" style="background-color: #fff; padding: 20px;">
+            <h2>Hola Administradores de PARC#E</h2>
+            <p>Han reportado al usuario {{ usuario.usuario }}</p>
+            <h3>Infracciones seleccionadas:</h3>
+            <ul>
+                {% if infraccion1 %}
+                    <li>{{ infraccion1 }}</li>
+                {% endif %}
+                {% if infraccion2 %}
+                    <li>{{ infraccion2 }}</li>
+                {% endif %}
+                {% if infraccion3 %}
+                    <li>{{ infraccion3 }}</li>
+                {% endif %}
+                {% if infraccion4 %}
+                    <li>{{ infraccion4 }}</li>
+                {% endif %}
+                {% if infraccion5 %}
+                    <li>{{ infraccion5 }}</li>
+                {% endif %}
+            </ul>
+            <h3>El motivo específico del reporte es el siguiente:</h3>
+            <p>{{ motivo }}</p>
+        </div>
+        <div class="footer" style="background-color: #365C45; color: #fff; text-align: center; padding: 10px;">
+            <p>&copy; 2023 Parche</p>
+        </div>
+    </div>
+</body>
+</html>

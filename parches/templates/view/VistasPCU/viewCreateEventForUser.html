@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "CSS/style.css" %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Document</title>
+</head>
+<body style="background-image: url(../static/IMG/zyro-image1.png );background-position: center;  background-repeat: no-repeat; background-size: cover; ">
+  
+  <div class="container-fluid   "
+  style="background-color: #cbe9d7; z-index: -3; ">
+  {%  include "view/VistasPCU/SearcheBar.html" %}
+</div>
+{% if messages %}
+{% for message in messages %}
+<script>
+    Swal.fire({
+title: "{{ message }}",
+text: "!todo esta correcto¡",
+icon: "{{ message.tags }}"
+});
+</script>
+  
+{% endfor %}
+{% endif %}
+
+<div class="mt-5  d-flex justify-content-center p-5 flex-wrap">
+  {% for element in data  %}
+  <div class="card mb-4 p-3 " style="width: 840px; background-color: rgba(239, 231, 231, 0.572);">
+    <div class="row g-0 ">
+      <div class="col-md-5 ">
+        <img src="{{element.imagen.url}}" class="img-fluid rounded-start d-flex justify-content-center"  alt="...">
+      </div>
+      <div class="col-md-7">
+        <div class="card-body">
+          <h2 class="card-title " >{{element.nombreactividad}}</h2>
+          <hr class="border border-black border border-3 rounded-3">
+          <p class="card-text">{{element.descripcion}}</p>
+          <hr class="border border-black border border-3 rounded-3">
+          <p class="card-text">
+            {% for actividad_id, participantes_count in participantes_por_actividad.items %}
+            {% if element.idactividad == actividad_id %}
+              Participantes: {{ participantes_count }}
+            {% endif %}
+          {% endfor %}
+           
+          <hr class="border border-black border border-3 rounded-3">
+            <p class="card-text text-end mt-4 "><a class="btn btn-primary me-4 " type="button" href="{% url 'participantes' element.idactividad %}">ver integrantes</a>
+            <a class="btn btn-primary me-4 expulsar-btn" type="button" href="{% url 'eliminar' element.idactividad %}">Eliminar</a> 
+            <a class="btn btn-success ms-4" type="button" href="{% url 'update' element.idactividad %}">Modificar</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  {% endfor %}
+   
+</div>
+
+  
+    
+
+</body>
+</html>
+
+<script>
+  $(document).ready(function () {
+     
+      $(".expulsar-btn").click(function (e) {
+          e.preventDefault(); 
+
+ 
+          Swal.fire({
+              title: "Esta seguro de eliminar este evento ?",
+              icon: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#3085d6",
+              cancelButtonColor: "#d33",
+              confirmButtonText: "Eliminar",
+              cancelButtonText: "Cancelar"
+          }).then((result) => {
+              if (result.isConfirmed) {
+              
+                  window.location.href = $(this).attr('href');
+              }
+          });
+      });
+  });
+</script>

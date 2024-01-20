@@ -1,0 +1,458 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* .encabezado {
+  flex-direction: row;
+} */
+
+.index1 {
+  height: 665px;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.scroll {
+  transition: all 0.8s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+.index2 {
+  overflow-x: hidden;
+}
+
+
+.menu-items {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.menu-items .btnIniciarS {
+  position: absolute;
+  font-size: 20px;
+  width: 180px;
+  margin-top: 40px;
+  margin-left: 740px;
+}
+
+
+.menu-items a {
+  text-decoration: none;
+  color: #fcfcfc;
+  /* Color del texto */
+  /* font-size: 20px; */
+  /* Tamaño de fuente */
+  /* margin-left: 40px; */
+  /* Espaciado entre elementos */
+}
+
+#miDiv {
+  width: 94.95rem;
+  height: 4rem;
+  background: linear-gradient(to bottom, #cbe9d7, rgb(214, 213, 213), #cbe9d7);
+}
+
+#miDiv2 {
+  width: 94.95rem;
+  height: 4rem;
+  background: linear-gradient(to bottom, #cbe9d7, rgb(214, 213, 213));
+}
+
+.menu-items h3 {
+  color: white;
+  margin-top: 48px;
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+/* .encabezado button {
+  height: 80px;
+  background-color: 0092FC;
+  color: rgb(27, 207, 36);
+  margin-top: 40px;
+  font-size: 911px;
+} */
+
+.principal {
+  margin-top: 75px;
+  color: white;
+  text-align: center;
+}
+
+/* .principal button {
+  font-weight: bold;
+  height: 60px;
+  font-size: 30px;
+  margin-top: 70px;
+  color: green;
+} */
+
+/* .principal button:hover {
+  font-weight: bold;
+  height: 60px;
+  font-size: 30px;
+  margin-top: 70px;
+  color: green;
+} */
+
+.eventos {
+  margin-top: 250px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#carousel img {
+  height: 30px;
+}
+
+
+.imgP {
+  height: 400px;
+  width: 600px;
+}
+.imgPerfilindex{
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  box-shadow: 50px 50px 50px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+  height: 112px;
+  width: 230px;
+}
+
+
+
+
+
+/* segunda vista */
+
+
+.fondo {
+  /* display: flex;
+  background-color: rgb(214, 213, 213);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1050px; */
+}
+
+.event {
+
+  align-items: center;
+  justify-content: center;
+
+}
+
+.segundafila {
+  display: flex;
+  margin-top: 30px;
+}
+
+.primerafila {
+
+  display: flex;
+  margin: auto;
+
+}
+
+.tablaUno {
+  background-color: #efefef;
+  background-size: cover;
+  margin-right: 20px;
+
+}
+
+.fondodegradado {
+  opacity: 100%;
+}
+
+
+.tablaDos {
+  background-color: #efefef;
+  background-size: cover;
+
+}
+
+.descripcion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.descripcion img {
+  height: 150px;
+  width: 260px;
+  border: 1px solid black;
+
+
+}
+
+.nombreEvento {
+  display: flex;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.nombreEvento input {
+  width: 180px;
+  height: 30px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.semanaEvento {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.semanaEvento input {
+  width: 140px;
+  height: 30px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+
+}
+
+.nombretorneo {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-image: url(../IMG/Rectangle\ 178.png);
+  background-size: cover;
+  height: 40px;
+  border: none;
+  border-radius: 8px 10px 10px 8px;
+  text-transform: uppercase;
+}
+
+.mapa iframe {
+  display: flex;
+  margin-left: 25px;
+  align-items: center;
+  justify-items: center;
+
+
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+
+}
+
+.contact input {
+  border: none;
+  width: 200px;
+  height: 30px;
+  background-color: rgb(254, 255, 255);
+}
+
+.vinculo {
+
+  border-radius: 8px 10px 10px 8px;
+  background-image: url(../IMG/Rectangle\ 178.png);
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  height: 55px;
+  align-items: center;
+}
+
+.tercerafila {
+  display: flex;
+  margin: auto;
+}
+
+.vinculo button {
+  border-radius: 10px;
+  background-color: #198754;
+  font-weight: bold;
+}
+
+.fecha {
+  border-radius: 10px;
+  justify-content: center;
+  display: grid;
+
+}
+
+.lugar input {
+  margin-right: 15px;
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: rgb(253, 253, 253);
+}
+
+/* Borde circular de imagenes del carrusel de la vista principal */
+.carousel-item img {
+  border-radius: 20px; 
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: smooth;
+
+  }
+
+  .menu-items .btnIniciarS {
+    font-size: 20px;
+    width: auto;
+    margin: 2px 5px 0 0px;
+  }
+
+  .principal {
+    margin-top: 65px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
+
+
+  .principal> :first-child {
+    order: 2;
+  }
+
+
+  .menu-toggle {
+    position: fixed;
+    left: 30px;
+  }
+
+
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    margin-top: 35px;
+  }
+
+  .menu-toggle .bar {
+    width: 40px;
+    height: 6px;
+    background-color: #333;
+    margin: 5px 0;
+  }
+
+  .menu-items {
+    display: none;
+    padding: 0px;
+    margin-left: 50px;
+  }
+
+
+  .menu-items.active {
+    display: block;
+  }
+
+  .index1 {
+    height: auto;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .imgP {
+    height: 300px;
+    width: 300px;
+  }
+
+  .scroll {
+    transition: all 0.8s ease-in-out;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .index2 {
+    overflow-x: hidden;
+  }
+
+  #logo {
+    height: 90px;
+    width: 150px;
+    margin-left: 300px;
+    margin-top: 10px;
+  }
+
+  .encabezado h3 {
+    color: white;
+    margin-top: 48px;
+    font-weight: bold;
+    font-size: 10px;
+  }
+
+  /* .btnCrear a {
+    font-size: 10rem;
+  } */
+
+  /* .btnCrear {
+    height: 90px;
+    width: 265px;
+  } */
+
+  .principal {
+    color: white;
+    text-align: center;
+  }
+
+  .principal h1 {
+    margin-top: 40px;
+    font-size: 33px;
+  }
+
+
+  /* segunda vista */
+  .tablaUno {
+    display: block;
+    justify-content: center;
+    margin-left: 30px;
+    background-color: #efefef;
+    background-size: cover;
+    margin-right: 20px;
+    width: 550px;
+
+  }
+
+  .event {
+    display: flex;
+    justify-content: center;
+  }
+
+  .tablaDos {
+    display: none;
+    background-color: #efefef;
+    background-size: cover;
+
+  }
+
+}

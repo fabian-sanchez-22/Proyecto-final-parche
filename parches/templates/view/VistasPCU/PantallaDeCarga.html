@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "CSS/bootstrap(1).css" %}" />
+    <link rel="stylesheet" href="{% static "CSS/pantallaCarga.css" %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" />
+</head>
+
+<body>
+    <style>
+        .background-container {
+            background-image: url(/static/IMG/Fondo\ degradado\ de\ tonos\ verdes\ _\ Vector\ Premium.png);
+        }
+    </style>
+    <div class="background-container">
+        <div class="container-fluid">
+            <img src="{% static "IMG/WhatsApp_Image_2023-04-30_at_9.22.07_PM-removebg-preview.png" %}" alt="" class="img">
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="loading-icon">
+                    <img src="{% static "IMG/4843010_ball_beach_game_sport_volleyball_icon.png" %}" alt="">
+                </div>
+                <div class="loading-icon">
+                    <img src="{% static "IMG/8541666_basketball_ball_icon.png" %}" alt="">
+                </div>
+                <div class="loading-icon">
+                    <img src="{% static "IMG/9023871_tennis_ball_fill_icon.png" %}" alt="">
+                </div>
+                <div class="loading-icon">
+                    <img src="{% static "IMG/9023883_soccer_ball_fill_icon.png" %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

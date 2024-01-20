@@ -1,0 +1,134 @@
+.event{
+
+align-items: center;
+ justify-content: center;
+
+}
+.segundafila{
+    display: flex;
+    margin-top: 30px;
+}
+ .primerafila{
+    display: flex;
+    margin: auto;
+ }
+.tablaUno{
+    background-color: rgb(4, 179,75 );
+margin-right: 20px;
+
+}
+
+.tablaDos{
+    background-color: rgb(4, 179,75 );
+
+}
+
+.descripcion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.descripcion img{
+    height: 140px;
+    width: 300px;
+    border: 1px solid black;
+    
+    
+}
+
+.nombreEvento{
+ margin-top: 20px;
+ text-align: center;
+margin-right: 15px;
+
+  
+}
+
+.nombreEvento input{
+width: 230px;
+ height: 30px; 
+ border: none;
+ background-color: rgb(109, 203, 255);
+ color: black;
+}
+.semanaEvento{
+    text-align: center;
+    margin-right: 15px;
+    
+    
+}
+.semanaEvento select{
+    width:150px ; 
+    height: 30px;
+     border: none;
+     background-color: rgb(109, 203, 255);
+
+}
+.nombretorneo{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: rgb(79, 178, 131);
+    height: 30px;
+    border: none ;
+    border-radius: 8px 10px 10px 8px;
+    text-transform: uppercase;
+}
+.mapa iframe{
+  display: flex;
+ margin-left: 60px;
+ align-items: center;
+ justify-items: center;
+  
+  
+}
+.comentario{
+display: flex;
+
+
+}
+
+
+.contact{
+  display: flex;
+  justify-content: center;
+}
+.contact input{
+    border: none;
+    width: 230px;
+    height: 30px;
+    background-color: rgb(109, 203, 255);
+}
+.vinculo{
+    border: solid rgb(143, 194, 163);
+    border-radius: 8px 10px 10px 8px;
+    display: flex;
+    text-align: center;
+    height: 55px;
+    align-items: center;
+}
+.tercerafila{
+    display: flex;
+    margin: auto;
+}
+.vinculo button{
+    border: none;
+    background-color: rgb(250, 191, 22);
+    font-weight: bold;
+}
+.fecha{
+    background-color: rgb(109, 203, 255);
+    height: 30px;
+   display: grid;
+   width: 100px;
+  
+}
+
+.lugar input{
+    margin-right:15px ;
+     width: 140px;
+      height: 30px; 
+      border: none;
+      background-color: rgb(109, 203, 255);
+}

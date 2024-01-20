@@ -1,0 +1,124 @@
+
+
+*{
+text-align: center;
+}
+
+.left{
+    
+border-right: solid black;
+}
+
+
+.titulos {
+    background-color: rgb(4, 179, 75);
+}
+
+.rep {
+position: absolute;
+right: 10px;
+}
+
+.imgPerfil{
+border-radius: 50%;
+height: 170px;
+width: 170px;
+margin-top: 80px;
+
+}
+
+.name {
+font-weight: bold;
+font-size: 25px;
+}
+
+
+a.btn.btn-success.mt-5.cerrarSesion {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+a.btn.btn-danger.mt-3.align-content-end.rep {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+#carouselExampleIndicators {
+    max-width: 400px; 
+    margin: 0 auto; 
+  }
+  
+  .carousel-inner {
+    height: 200px; 
+  }
+  
+  .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%; 
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 20px; 
+    height: 20px; 
+  }
+  
+  .carousel-indicators li {
+    width: 10px; 
+    height: 10px; 
+  }
+  
+.misEventos{
+    background-color: rgb(4, 179, 75);
+}
+
+.misEventos h2 {
+color: white;
+}
+
+.rating {
+    font-size: 90px;
+  }
+  
+  .star {
+    color: #ffe600;
+    cursor: pointer;
+  }
+  
+  .star:hover,
+  .star:hover ~ .star,
+  .star.clicked,
+  .star.clicked ~ .star {
+    color: rgb(0, 0, 0);
+  }
+
+  
+.com {
+text-align: left;
+}
+
+/* Estilos para pantalla grande (ancho máximo de 768px) */
+@media (max-width: 768px) {
+  .col-7.left {
+    width: 100%;
+  }
+
+  .col-5.right {
+    width: 100%;
+    text-align: center;
+    order: -1; 
+  }
+
+  .imgPerfil {
+    max-width: 80%;
+  }
+}
+
+  

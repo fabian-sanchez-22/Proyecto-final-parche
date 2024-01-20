@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="{% static "CSS/iniciarSesion.css" %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body style="background-image: url(http://m.gettywallpapers.com/es/wp-content/uploads/2023/06/Fondos-de-Pantalla-Futbol-4k.jpg); background-size: cover; background-position: center;">
+    {% if messages %}
+    {% for message in messages %}
+    <script>
+        Swal.fire({
+  title: "{{ message }}",
+  icon: "{{ message.tags }}"
+});
+    </script>
+      
+    {% endfor %}
+{% endif %}
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 44.8rem; ">
+        {% block content %}
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <div class="login-form">
+                <h1 style="color: #365C45;">Iniciar sesión</h1>
+                <form method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="{{ form.username.id_for_label }}" class="form-label">Nombre de usuario</label>
+                        <input type="text" name="{{form.username.name}}" id="{{ form.username.id_for_label }}"
+                            class="form-control" placeholder="Nombre de usuario" required autofocus>
+                    </div>
+                    <div class="mb-3">
+                        <label for="{{ form.contrasena.id_for_label }}" class="form-label">Contraseña</label>
+                        <input type="password" name="{{form.password.name}}" id="{{ form.contrasena.id_for_label }}"
+                            class="form-control" placeholder="Contraseña" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <a href="{% url 'password_reset' %}" class="forgot-link text-secondary-emphasis" style="color: #0c331b;">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success">Iniciar sesión</button>
+                        <input type="hidden" name="next" value="{{ next }}">
+                    </div>
+                </form>
+
+                {% if form.errors %}
+                <div class="alert alert-danger mt-3" role="alert">
+                    Su nombre de usuario y/o contraseña no coinciden. Inténtalo de nuevo.
+                </div>
+                {% endif %}
+
+                <div class="text-center mt-3">
+                    <a href="{% url 'selectUser' %}" class="" style="color: #052411;">Registrarme</a>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+</body>
+
+</html>

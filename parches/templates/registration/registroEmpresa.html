@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empresa</title>
+    <link rel="stylesheet" href="{% static "CSS/bootstrap(1).css" %}">
+    <link rel="stylesheet" href="{% static "CSS/registroEmpresa.css" %}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid background d-flex justify-content-end align-items-end" style="height: 45rem;">
+        <img src="{% static 'IMG/bgr.png' %}" class="bg" alt="">
+        <div class="row cartaR me-5">
+            <div class="palabraRegistro">
+                <h2 class="pregistro">REGISTRO</h2>
+            </div>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="inputRegistro">
+
+                    <div class="numeroRegistro">
+                        {{ form.nombreempresa }}
+                        {% if form.nombreempresa.errors %}
+                            <div class="error">{{ form.nombreempresa.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="nombreRegistro">
+                        {{ form.usuario }}
+                        {% if form.usuario.errors %}
+                            <div class="error">{{ form.usuario.errors }}</div>
+                        {% endif %}
+                    </div>
+                
+                    <div class="correoRegistro">
+                        {{ form.correo }}
+                        {% if form.correo.errors %}
+                            <div class="error">{{ form.correo.errors }}</div>
+                        {% endif %}
+                    </div>
+                
+                    <div class="numeroRegistro">
+                        {{ form.telefono }}
+                        {% if form.telefono.errors %}
+                            <div class="error">{{ form.telefono.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <div class="contraseñaRegistro">
+                        {{ form.direccion }}
+                        {% if form.direccion.errors %}
+                            <div class="error">{{ form.direccion.errors }}</div>
+                        {% endif %}
+                    </div>
+                
+                    <div class="contraseñaRegistro">
+                        {{ form.password1 }}
+                        {% if form.password1.errors %}
+                            <div class="error">{{ form.password1.errors }}</div>
+                        {% endif %}
+                    </div>
+                    <div class="contraseñaRegistro">
+                        {{ form.password2 }}
+                        {% if form.password2.errors %}
+                            <div class="error">{{ form.password2.errors }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                {{ document.documentocol }}
+                <button id="mi-boton" type="button" class="btn btn-success">Cargar Documento de Identidad</button>
+                
+                <input type="file" id="input-file" style="display: none">
+                <script>
+                    let $miBoton = document.getElementById('mi-boton');
+                    let $inputFile = document.getElementById('input-file');
+                
+                    $miBoton.addEventListener('click', (e) => {
+                        $inputFile.click();
+                    });
+                
+                    $inputFile.addEventListener('change', (e) => {
+                        console.log(e.target.files[0].name);
+                        $miBoton.innerHTML = e.target.files[0].name;
+                    });
+                </script>
+                
+                <div class="botonRegistrarse">
+                    <button type="submit" class="btn btn-success">Registrate</button>
+                </div>
+                
+                <div class="cuentaExistente">
+                    <a href="{% url "login" %}">¿Ya tienes una cuenta creada?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html> 
+

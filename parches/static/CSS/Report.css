@@ -1,0 +1,21 @@
+.colorInput{
+    background-color: rgb(217, 217, 217);
+    border: 2px;
+    margin-bottom: 10px;
+}
+
+.cartaR {
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px 40px 40px 40px;
+    box-shadow: 50px 50px 50px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.palabraRegistro {
+    margin: 10px;
+    color: #365C45;
+}
+
+.palabraRegistro h1 {
+    font-size: 55px;
+}
